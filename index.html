@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task2_ciprabyte.css">
+    <title>CALCULATOR</title>
+</head>
+
+<body>
+    <div class="row0">CALCULATOR</div>
+    <div class="principal">
+        <div id="row1">
+            <input type="text" id="display" readonly>
+        </div>
+        <div class="row2">
+            <button onclick="allClear()">AC</button>
+            <button onclick="deleteOneElement()">DE</button>
+            <button onclick="appendTodisplay('**')"><strong>^</strong></button>
+            <button onclick="appendTodisplay('/')">&div;</button>
+        </div>
+        <div class="row3">
+            <button onclick="appendTodisplay(7)">7</button>
+            <button onclick="appendTodisplay(8)">8</button>
+            <button onclick="appendTodisplay(9)">9</button>
+            <button onclick="appendTodisplay('*')">X</button>
+        </div>
+        <div id="row4">
+            <button onclick="appendTodisplay(4)">4</button>
+            <button onclick="appendTodisplay(5)">5</button>
+            <button onclick="appendTodisplay(6)">6</button>
+            <button onclick="appendTodisplay('-')">&minus;</button>
+        </div>
+        <div class="row5">
+            <button onclick="appendTodisplay(1)">1</button>
+            <button onclick="appendTodisplay(2)">2</button>
+            <button onclick="appendTodisplay(3)">3</button>
+            <button onclick="appendTodisplay('+')">+</button>
+        </div>
+        <div class="row6">
+            <button onclick="appendTodisplay(0)">0</button>
+            <button class="dot " onclick="appendTodisplay('.')">&#8226;</button>
+            <button onclick="result()">=</button>
+        </div>
+    </div>
+</body>
+<script>
+    function appendTodisplay(value) {
+        document.getElementById("display").value += value;
+    }
+
+    function deleteOneElement() {
+        var y = document.getElementById("display").value;
+        document.getElementById("display").value = y.slice(0, -1);
+    }
+
+    function allClear() {
+        document.getElementById("display").value = "";
+    }
+
+    function calculatePercentage() {
+        var expression = document.getElementById("display").value;
+        var value = eval(expression);
+        var percentageValue = value * 0.01;
+        document.getElementById("display").value = percentageValue;
+    }
+
+    function result() {
+        var x = document.getElementById("display").value;
+        document.getElementById("display").value = eval(x);
+    }
+</script>
+
+</html>
