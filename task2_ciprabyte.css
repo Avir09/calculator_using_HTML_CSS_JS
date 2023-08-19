@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D3D3D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.row0 {
+    position: absolute;
+    top: 4rem;
+    width: 25.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.3rem;
+    font-weight: bold;
+    padding: 1rem;
+    border: 3.5px solid lightgreen;
+    border-radius: 10px;
+    background-color: yellow;
+    color: red;
+    box-shadow: 0px 1px 20px 5px red;
+    text-shadow: 4px 20px 4px skyblue;
+    caret-color: transparent;
+}
+
+.principal {
+    background-color: #00d4ff;
+    position: absolute;
+    top: 13rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 80%;
+    /* Adjust the maximum width as needed */
+    animation: outside 5s linear infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+}
+
+.principal div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+#display {
+    width: 100%;
+    height: 5rem;
+    padding: 10px;
+    font-size: 25px;
+    text-align: right;
+    border: 2px solid black;
+    border-radius: 10px;
+    caret-color: transparent;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 22px;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 35%;
+    /* Set the width to divide the buttons equally */
+    box-sizing: border-box;
+    /* Include padding and border in the width */
+    border: 2px solid black;
+    border-radius: 50px;
+    margin-right: 2px;
+}
+
+@keyframes outside {
+    0% {
+        box-shadow: 5px 5px 5px 5px green, -4px -8px 5px 5px #ff8800;
+    }
+    25% {
+        box-shadow: 5px 5px 5px 5px yellow, -4px -8px 5px 5px #ff8800;
+    }
+    50% {
+        box-shadow: 5px 5px 5px 5px yellow, -4px -8px 5px 5px red;
+    }
+    75% {
+        box-shadow: 5px 5px 5px 5px green, -4px -8px 5px 5px yellow;
+    }
+    100% {
+        box-shadow: 5px 5px 5px 5px green, -4px -8px 5px 5px #ff8800;
+    }
+}
+
+button:hover {
+    background-color: #FFB6C1;
+    color: #8A2BE2;
+}
